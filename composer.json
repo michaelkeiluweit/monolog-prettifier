@@ -1,6 +1,7 @@
 {
   "name": "michaelkeiluweit/monolog-prettifier",
   "type": "oxideshop-module",
+  "license": "GPL-3.0-or-later",
   "version": "1.0.0",
   "extra": {
     "oxideshop": {
