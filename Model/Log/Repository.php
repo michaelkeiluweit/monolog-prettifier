@@ -6,7 +6,7 @@ namespace MichaelKeiluweit\MonologPrettifier\Model\Log;
 /**
  * Class Collection
  */
-class Collection
+class Repository
 {
     private static string $pattern = '/\[(?P<date>.*)\] (?P<logger>[\w\ ]+\w+).(?P<level>\w+): (?P<message>[^\[\{]+) (?P<context>[\[\{].*[\]\}]) (?P<extra>[\[\{].*[\]\}])/';
 
@@ -26,10 +26,12 @@ class Collection
 
         foreach ($this->getContentAsArray() as $line) {
 
-            preg_match(self::$pattern, $line, $matches); //@todo preg match all
+            preg_match(self::$pattern, $line, $matches);
+
             if (empty($matches)) {
                 continue;
             }
+
             $collection[] = new Entity($matches);
         }
 

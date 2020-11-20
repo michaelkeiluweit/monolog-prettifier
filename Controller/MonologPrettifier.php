@@ -3,7 +3,7 @@
 namespace MichaelKeiluweit\MonologPrettifier\Controller;
 
 
-use MichaelKeiluweit\MonologPrettifier\Model\Log\Collection;
+use MichaelKeiluweit\MonologPrettifier\Model\Log\Repository;
 use OxidEsales\Eshop\Application\Controller\FrontendController;
 use OxidEsales\Eshop\Core\Registry;
 use OxidEsales\EshopCommunity\Internal\Framework\Logger\Validator\PsrLoggerConfigurationValidator;
@@ -34,9 +34,10 @@ class MonologPrettifier extends FrontendController
             Registry::getUtils()->redirect('');
         }
 
-        $collection = new Collection();
-        $this->_aViewData['entities'] = $collection->getEntities();
-        $this->_aViewData['amount'] = count($collection->getEntities());
+        $repository = new Repository();
+        $entities = $repository->getEntities();
+        $this->_aViewData['entities'] = $entities;
+        $this->_aViewData['amount'] = count($entities);
 
         return 'list.tpl';
     }
