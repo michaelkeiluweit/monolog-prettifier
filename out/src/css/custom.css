@@ -28,14 +28,11 @@ pre {
     border-radius: 4px;
     border: 1px solid #bbb;
     padding: 10px;
+    border-left-width: 2px;
 }
 
 .item-date {
     vertical-align: middle;
-}
-
-.row {
-
 }
 
 .columns {
