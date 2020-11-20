@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace MichaelKeiluweit\MonologPrettifier\Controller;
 
@@ -36,7 +36,7 @@ class MonologPrettifier extends FrontendController
 
         $collection = new Collection();
         $this->_aViewData['entities'] = $collection->getEntities();
-        $this->_aViewData['entityAmount'] = count($collection->getEntities()); //todo name
+        $this->_aViewData['amount'] = count($collection->getEntities());
 
         return 'list.tpl';
     }
@@ -53,7 +53,6 @@ class MonologPrettifier extends FrontendController
         ;
     }
 
-    //@todo test
     public function getColorByLogLevelName(string $logLevel): string
     {
         $logLevel = strtolower($logLevel);

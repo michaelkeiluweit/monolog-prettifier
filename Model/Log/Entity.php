@@ -1,10 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: michael
- * Date: 28.08.18
- * Time: 10:06
- */
+<?php declare(strict_types=1);
 
 namespace MichaelKeiluweit\MonologPrettifier\Model\Log;
 

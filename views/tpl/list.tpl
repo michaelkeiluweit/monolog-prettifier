@@ -16,7 +16,7 @@
 
     <h2>Monolog Prettifier</h2>
 
-    [{if $entityAmount > 0}]
+    [{if $amount > 0}]
     [{foreach from=$entities item=entity}]
     <div class="item" style="border-color: #[{$oView->getColorByLogLevelName($entity->getLevel())}];">
         <div class="row">
