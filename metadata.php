@@ -19,7 +19,7 @@ $aModule = [
     'version'      => '1.0.0',
     'author'       => 'Michael Keiluweit',
     'url'          => 'https://keiluweit.com',
-    'email'        => 'michael@keiluweit.com',
+    'email'        => 'michael.keiluweit@gmail.com',
     'controllers'  => [
         'mkemonologprettifier' => MichaelKeiluweit\MonologPrettifier\Controller\MonologPrettifier::class
     ],
